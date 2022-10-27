@@ -48,7 +48,7 @@ int main()
     sched_setscheduler(threadB, SCHED_RR, NULL);
     sched_setscheduler(threadC, SCHED_FIFO, NULL);
     struct sched_param param;
-    param.sched_priority = 1;
+    param.sched_priority = 66;
     struct sched_param param2;
     param2.sched_priority = 0;
     pthread_setschedparam(threadA, SCHED_OTHER, &param2);
