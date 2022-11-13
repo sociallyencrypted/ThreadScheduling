@@ -1,5 +1,7 @@
-all: main.c
-	gcc -o main main.c
-
+all: thread process
+thread: thread.c
+	gcc -o thread thread.c
+process: process.c kernelCompile.sh
+	gcc -o process process.c
 clean:
-	rm -f main
+	rm -f thread process
