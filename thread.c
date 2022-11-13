@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include <sched.h>
 #include <time.h>
+#include <unistd.h>
 
 void countA()
 {
