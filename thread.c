@@ -48,8 +48,10 @@ int main()
     sched_setscheduler(threadB, SCHED_RR, NULL);
     sched_setscheduler(threadC, SCHED_FIFO, NULL);
     struct sched_param param;
-    param.sched_priority = 0;
-    pthread_setschedparam(threadA, SCHED_OTHER, &param);
+    param.sched_priority = 1;
+    struct sched_param param2;
+    param2.sched_priority = 0;
+    pthread_setschedparam(threadA, SCHED_OTHER, &param2);
     pthread_setschedparam(threadB, SCHED_RR, &param);
     pthread_setschedparam(threadC, SCHED_FIFO, &param);
     pthread_join(threadA, NULL);
